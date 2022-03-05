@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-//ESTO ES UN COMENTARIO --------------------------------
+//ESTO ES UN COMENTARIO DE CORDERO --------------------------------
 
 ReactDOM.render(
   <React.StrictMode>

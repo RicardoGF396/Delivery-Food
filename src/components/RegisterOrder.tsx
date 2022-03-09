@@ -8,7 +8,7 @@ export default function CreatePersonForm() {
 
       <table> {/*Título*/}
         <tr>
-          <td className="linea"><h1 className="fuente-azul">Registrar orden</h1></td>
+          <td className="linea"><p className="fuente-azul size-16">Registrar orden</p></td>
           <td className="linea"><div className="divider fuente-naranja" /></td>
         </tr>
       </table>
@@ -18,7 +18,7 @@ export default function CreatePersonForm() {
         <form > {/*Formulario*/}
           <table className="formulario">
             <tr>
-              <td align="right"><h2 className="fuente-azul">Nombre de pizza</h2></td> {/*ComboBox nombre*/}
+              <td align="right"><h2 className="fuente-azul size-14">Nombre de pizza</h2></td> {/*ComboBox nombre*/}
               <td ><select name="" id="" className="combobox fuente-azul">
                 <option disabled selected >Seleciona el nombre</option>
                 <option value="" >Mediana (30cm)</option>
@@ -27,7 +27,7 @@ export default function CreatePersonForm() {
               </select></td>
             </tr>
             <tr>
-              <td align="right"><h2 className="fuente-azul">Tamaño de pizza</h2></td> {/*ComboBox tamaño*/}
+              <td align="right"><h2 className="fuente-azul size-14">Tamaño de pizza</h2></td> {/*ComboBox tamaño*/}
               <td><select name="" id="" className="combobox fuente-azul">
                 <option disabled selected>Seleciona el tamaño</option>
                 <option value="">Original</option>
@@ -38,13 +38,13 @@ export default function CreatePersonForm() {
               </select></td>
             </tr>
             <tr>
-              <td align="right"><h2 className="fuente-azul">Ingredientes</h2></td> {/*Ingredientes*/}
+              <td align="right"><h2 className="fuente-azul size-14">Ingredientes</h2></td> {/*Ingredientes*/}
               <td><hr className="linea-subtitulo" /></td>
             </tr>
 
             <tr>
               <td align="right">
-                <h2 className="fuente-naranja">Vegetales</h2> {/*Ingredientes vegetales*/}
+                <h2 className="fuente-naranja size-14">Vegetales</h2> {/*Ingredientes vegetales*/}
               </td>
               <td>
                 <table>
@@ -123,7 +123,7 @@ export default function CreatePersonForm() {
 
             <tr>
               <td align="right">
-                <h2 className="fuente-naranja">Carnes</h2> {/*Ingredientes carnes*/}
+                <h2 className="fuente-naranja size-14">Carnes</h2> {/*Ingredientes carnes*/}
               </td>
               <td>
                 <table>
@@ -199,7 +199,7 @@ export default function CreatePersonForm() {
 
             <tr>
               <td align="right">
-                <h2 className="fuente-naranja">Vegetales</h2> {/*Ingredientes otros*/}
+                <h2 className="fuente-naranja size-14">Vegetales</h2> {/*Ingredientes otros*/}
               </td>
 
               <td>
@@ -259,7 +259,7 @@ export default function CreatePersonForm() {
             </tr>
 
             <tr>
-              <td align="right"><h2 className="fuente-azul">Bebida extra</h2></td>
+              <td align="right"><h2 className="fuente-azul size-14">Bebida extra</h2></td>
               <td><select name="" id="" className="fuente-azul"> {/*ComboBox refesco extra*/}
                 <option disabled selected>Seleciona la bebida</option>
                 <option value="">Original</option>

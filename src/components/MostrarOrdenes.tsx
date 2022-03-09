@@ -1,10 +1,11 @@
-import notification_img from "../media/notification.png";
-import profile_img from "../media/profile_picture.png";
-import drop_img from "../media/down_arrow.svg";
-import up_img from "../media/up_arrow.svg";
-import pizza_img from "../media/pizza_img.png"
-import cancel from "../media/cancel_img.png"
-import "../styles/style.css";
+import notification_img from "../assets/notification.png";
+import profile_img from "../assets/profile_picture.png";
+import drop_img from "../assets/down_arrow.svg";
+import up_img from "../assets/up_arrow.svg";
+import pizza_img from "../assets/pizza_img.png"
+import cancel from "../assets/cancel_img.png"
+
+import "../styles/style_sidebar.css";
 
 export default function mostrarOrdenes() {
   return (

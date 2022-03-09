@@ -9,7 +9,7 @@ function App() {
       <RegisterOrder/>
         </div>
       <div className="second_section">
-      <MostrarOrdenes />
+      <MostrarOrdenes />      
         </div>
     </div>
   );

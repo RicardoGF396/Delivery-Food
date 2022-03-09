@@ -4,16 +4,16 @@ export default function CreatePersonForm() {
 
   return (
 
-    <div className="margen-20 container_form">
+    <div className="margen-20 main_container">
 
       <table> {/*Título*/}
         <tr>
           <td className="linea"><h1 className="fuente-azul">Registrar orden</h1></td>
-          <td className="linea"><hr className="linea-titulo fuente-naranja" /></td>
+          <td className="linea"><div className="divider fuente-naranja" /></td>
         </tr>
       </table>
 
-      <div className="margen-20 fondo-blanco borde-redondeado-10 sombra"> {/*Recuadro formulario*/}
+      <div className="container_form"> {/*Recuadro formulario*/}
 
         <form > {/*Formulario*/}
           <table className="formulario">
@@ -51,6 +51,7 @@ export default function CreatePersonForm() {
                   <tr>
                     <td>
                       <ul>
+
                         <li>
                           <label>
                             <input type={"checkbox"} />
@@ -59,6 +60,7 @@ export default function CreatePersonForm() {
                             </div>
                           </label>
                         </li>
+
                         <li>
                           <label>
                             <input type={"checkbox"} />
@@ -67,6 +69,7 @@ export default function CreatePersonForm() {
                             </div>
                           </label>
                         </li>
+
                       </ul>
                     </td>
                     <td>

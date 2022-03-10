@@ -4,6 +4,7 @@ import Order from "../models/Order";
 import axios from "axios";
 import MostrarOrdenes from './MostrarOrdenes';
 import React from 'react';
+import Swal from "sweetalert2"
 
 /*class Actualizar extends React.Component {
   onTrigger = (event: event) => {        
@@ -81,6 +82,13 @@ export default function CreatePizzaForm(props: any) {
         setSoda(newValueForSoda);
     }
 
+    const modalCreado = () => { //Modal de orden creada
+      Swal.fire({
+        title:"Orden creada",
+        confirmButtonColor: "#FEAD3B",
+        icon: "success",
+      });
+    };
 
     // Crea una nueva orden
     async function handleSave(event: MouseEvent<HTMLButtonElement>) {
@@ -92,6 +100,7 @@ export default function CreatePizzaForm(props: any) {
         console.log("Order to create: ", orderToCreate);
         clearForm();
         window.alert("Order Created!");
+        // modalCreado();
         window.location.replace("http://localhost:3000");
     }
 
@@ -168,7 +177,7 @@ export default function CreatePizzaForm(props: any) {
 
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Jalapeños"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Jalapeños "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Jalapeños</p>
                             </div>
@@ -177,7 +186,7 @@ export default function CreatePizzaForm(props: any) {
 
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Pimiento"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Pimiento "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Pimiento</p>
                             </div>
@@ -190,7 +199,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Cebolla"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Cebolla "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa " aria-hidden="true">Cebolla</p>
                             </div>
@@ -198,7 +207,7 @@ export default function CreatePizzaForm(props: any) {
                         </li>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Piña"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Piña "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa " aria-hidden="true">Piña</p>
                             </div>
@@ -210,7 +219,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Aceitunas"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Aceitunas "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa " aria-hidden="true">Aceitunas</p>
                             </div>
@@ -222,7 +231,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Champiñones"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Champiñones "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa " aria-hidden="true">Champiñones</p>
                             </div>
@@ -246,7 +255,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" placeholder="Ingredientes" value = {"Pepperoni"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" placeholder="Ingredientes" value = {"Pepperoni "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Pepperoni</p>
                             </div>
@@ -254,7 +263,7 @@ export default function CreatePizzaForm(props: any) {
                         </li>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Jamón"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Jamón "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Jamón</p>
                             </div>
@@ -266,7 +275,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Chorizo"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Chorizo "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Chorizo</p>
                             </div>
@@ -274,7 +283,7 @@ export default function CreatePizzaForm(props: any) {
                         </li>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Salami"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Salami "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Salami</p>
                             </div>
@@ -286,7 +295,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Carne molida"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Carne molida "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Carne  Molida</p>
                             </div>
@@ -298,7 +307,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Tocino"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Tocino "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Tocino</p>
                             </div>
@@ -323,7 +332,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Salsa habanero"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" value = {"Salsa habanero "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Salsa Habanero</p>
                             </div>
@@ -335,7 +344,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" placeholder="Ingredientes" value = {"Queso parmesano"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" placeholder="Ingredientes" value = {"Queso parmesano "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Queso Parmesano</p>
                             </div>
@@ -347,7 +356,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" placeholder="Ingredientes" value = {"Queso crema"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" placeholder="Ingredientes" value = {"Queso crema "} onChange = {handleIngredientsChange}/>
                            <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Queso Crema</p>
                             </div>
@@ -359,7 +368,7 @@ export default function CreatePizzaForm(props: any) {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" placeholder="Ingredientes" value = {"Queso cheddar"} onChange = {handleIngredientsChange}/>
+                          <input type="checkbox" placeholder="Ingredientes" value = {"Queso cheddar "} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Queso Cheddar</p>
                             </div>

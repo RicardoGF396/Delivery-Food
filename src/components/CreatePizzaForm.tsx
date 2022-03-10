@@ -133,24 +133,24 @@ export default function CreatePizzaForm() {
         </select>
         <br />
         
-        <input type="checkbox" placeholder="Ingredientes" value = {"Jalapeños"} onChange = {handleIngredientsChange}/>Jalapeños
-        <input type="checkbox" placeholder="Ingredientes" value = {"Pimiento"} onChange = {handleIngredientsChange}/>Pimiento
-        <input type="checkbox" placeholder="Ingredientes" value = {"Cebolla"} onChange = {handleIngredientsChange}/>Cebolla
-        <input type="checkbox" placeholder="Ingredientes" value = {"Piña"} onChange = {handleIngredientsChange}/>Piña
-        <input type="checkbox" placeholder="Ingredientes" value = {"Aceitunas"} onChange = {handleIngredientsChange}/>Aceitunas
-        <input type="checkbox" placeholder="Ingredientes" value = {"Champiñones"} onChange = {handleIngredientsChange}/>Champiñones
+        <input type="checkbox" placeholder="Ingredientes" value = {"Jalapeños "} onChange = {handleIngredientsChange}/>Jalapeños
+        <input type="checkbox" placeholder="Ingredientes" value = {"Pimiento "} onChange = {handleIngredientsChange}/>Pimiento
+        <input type="checkbox" placeholder="Ingredientes" value = {"Cebolla "} onChange = {handleIngredientsChange}/>Cebolla
+        <input type="checkbox" placeholder="Ingredientes" value = {"Piña "} onChange = {handleIngredientsChange}/>Piña
+        <input type="checkbox" placeholder="Ingredientes" value = {"Aceitunas "} onChange = {handleIngredientsChange}/>Aceitunas
+        <input type="checkbox" placeholder="Ingredientes" value = {"Champiñones "} onChange = {handleIngredientsChange}/>Champiñones
         <br />
-        <input type="checkbox" placeholder="Ingredientes" value = {"Pepperoni"} onChange = {handleIngredientsChange}/>Pepperoni
-        <input type="checkbox" placeholder="Ingredientes" value = {"Jamón"} onChange = {handleIngredientsChange}/>Jamón
-        <input type="checkbox" placeholder="Ingredientes" value = {"Chorizo"} onChange = {handleIngredientsChange}/>Chorizo
-        <input type="checkbox" placeholder="Ingredientes" value = {"Salami"} onChange = {handleIngredientsChange}/>Salami
-        <input type="checkbox" placeholder="Ingredientes" value = {"Carne molida"} onChange = {handleIngredientsChange}/>Carne molida
-        <input type="checkbox" placeholder="Ingredientes" value = {"Tocino"} onChange = {handleIngredientsChange}/>Tocino
+        <input type="checkbox" placeholder="Ingredientes" value = {"Pepperoni "} onChange = {handleIngredientsChange}/>Pepperoni
+        <input type="checkbox" placeholder="Ingredientes" value = {"Jamón "} onChange = {handleIngredientsChange}/>Jamón
+        <input type="checkbox" placeholder="Ingredientes" value = {"Chorizo "} onChange = {handleIngredientsChange}/>Chorizo
+        <input type="checkbox" placeholder="Ingredientes" value = {"Salami "} onChange = {handleIngredientsChange}/>Salami
+        <input type="checkbox" placeholder="Ingredientes" value = {"Carne molida "} onChange = {handleIngredientsChange}/>Carne molida
+        <input type="checkbox" placeholder="Ingredientes" value = {"Tocino "} onChange = {handleIngredientsChange}/>Tocino
         <br />
-        <input type="checkbox" placeholder="Ingredientes" value = {"Salsa habanero"} onChange = {handleIngredientsChange}/>Salsa habanero
-        <input type="checkbox" placeholder="Ingredientes" value = {"Queso parmesano"} onChange = {handleIngredientsChange}/>Queso parmesano
-        <input type="checkbox" placeholder="Ingredientes" value = {"Queso crema"} onChange = {handleIngredientsChange}/>Queso crema
-        <input type="checkbox" placeholder="Ingredientes" value = {"Queso cheddar"} onChange = {handleIngredientsChange}/>Queso cheddar
+        <input type="checkbox" placeholder="Ingredientes" value = {"Salsa habanero "} onChange = {handleIngredientsChange}/>Salsa habanero
+        <input type="checkbox" placeholder="Ingredientes" value = {"Queso parmesano "} onChange = {handleIngredientsChange}/>Queso parmesano
+        <input type="checkbox" placeholder="Ingredientes" value = {"Queso crema "} onChange = {handleIngredientsChange}/>Queso crema
+        <input type="checkbox" placeholder="Ingredientes" value = {"Queso cheddar "} onChange = {handleIngredientsChange}/>Queso cheddar
         <br />
         <input type="number" placeholder="Precio" value = {price} onChange = {handlePriceChange}/>
         <br />

@@ -7,9 +7,10 @@ import cancel from "../assets/cancel_img.png"
 import Order from "../models/Order"
 import axios from "axios";
 import CreatePizzaForm from "./RegisterOrder";
-
 import "../styles/style_sidebar.css";
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2"
+import { time } from "console";
 
 export default function MostrarOrdenes() {
   const [ order, setOrder ] = useState<Order[]>([]);
@@ -31,11 +32,20 @@ export default function MostrarOrdenes() {
     setDeleted(false);
   }, [ order, loaded, deleted ]);
 
+  const modalEliminado = () => { //Modal de orden eliminada
+    Swal.fire({
+      title:"Orden eliminada",
+      confirmButtonColor: "#FEAD3B",
+      icon: "info",
+      timer: 2000
+    });
+  };
 
   async function deleteOrder(idOrder: string) {
     await axios.delete(`http://localhost:3001/orders/${idOrder}`);
 
-    window.alert("Order Deleted");
+    // window.alert("Order Deleted");
+    modalEliminado();
     
     setDeleted(true);
   }

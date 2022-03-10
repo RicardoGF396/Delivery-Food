@@ -128,6 +128,10 @@
     color: #FEAD3B;
   }
 
+  .bold {
+    font-weight: bolder;
+  }
+
   .orange_section{
     height: 130px;
     width: 125px;

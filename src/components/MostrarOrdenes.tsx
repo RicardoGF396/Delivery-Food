@@ -6,6 +6,7 @@ import pizza_img from "../assets/pizza_img.png"
 import cancel from "../assets/cancel_img.png"
 import Order from "../models/Order"
 import axios from "axios";
+import CreatePizzaForm from "./RegisterOrder";
 
 import "../styles/style_sidebar.css";
 import { useState, useEffect } from "react";
@@ -64,38 +65,42 @@ export default function MostrarOrdenes() {
   ));
   
   return (
-    <div className="sidebar">
-      <div className="description">
-        <div className="notification">
-          <a href="#">
-            <img src={notification_img} alt="notification" />
-          </a>
-        </div>
-
-        <div className="profile_description">
-          <img src={profile_img} alt="" width={35} height={35} />
-
-          <div className="text_profile">
-            <h4>Lily Gómez Hernández</h4>
-            <p>Trabajadora</p>
+    <div>
+      <CreatePizzaForm />    
+      <div className="sidebar">
+        
+        <div className="description">
+          <div className="notification">
+            <a href="#">
+              <img src={notification_img} alt="notification" />
+            </a>
           </div>
 
-          <img src={drop_img} alt="" className="drop_arrow" />
-        </div>
-      </div>
+          <div className="profile_description">
+            <img src={profile_img} alt="" width={35} height={35} />
 
-      <div className="title_order">
-        <h2>Ordenes</h2>
+            <div className="text_profile">
+              <h4>Lily Gómez Hernández</h4>
+              <p>Trabajadora</p>
+            </div>
 
-        <div className="filter">
-          <p>Más recientes</p>
-          <a href="#">
-            <img src={up_img} alt="" width={16} height={16} />
-          </a>
+            <img src={drop_img} alt="" className="drop_arrow" />
+          </div>
         </div>
+
+        <div className="title_order">
+          <h2>Ordenes</h2>
+
+          <div className="filter">
+            <p>Más recientes</p>
+            <a href="#">
+              <img src={up_img} alt="" width={16} height={16} />
+            </a>
+          </div>
+        </div>
+        <div className="container_cards">{renderOrder()}</div>
+        
       </div>
-      <div className="container_cards">{renderOrder()}</div>
-       
     </div>
   );
 }

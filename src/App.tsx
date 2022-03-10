@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='body'>
       <div className="first_section">
-      <RegisterOrder />
+      {/* <RegisterOrder /> */}
         </div>
       <div className="second_section">
       <MostrarOrdenes />      

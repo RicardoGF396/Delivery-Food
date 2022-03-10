@@ -1,9 +1,18 @@
 import '../styles/style_form.css'
-import {useState, MouseEvent, ChangeEvent} from "react";
+import {useState, MouseEvent, ChangeEvent, useEffect} from "react";
 import Order from "../models/Order";
 import axios from "axios";
+import MostrarOrdenes from './MostrarOrdenes';
+import React from 'react';
 
-export default function CreatePizzaForm() {
+/*class Actualizar extends React.Component {
+  onTrigger = (event: event) => {        
+    this.props.parentCallback(event.target.myname.value);        
+    event.preventDefault();    
+  }
+}*/
+
+export default function CreatePizzaForm(props: any) {
   //INICIO INSERTAR
     const [idOrder, setId] = useState ('');
     const [clientName, setClient] = useState ('');
@@ -59,7 +68,6 @@ export default function CreatePizzaForm() {
             ingredients.splice(pos, 1);
     }
     }
-    
 
     console.log("Precio:" + price);
     function handlePriceChange(event: ChangeEvent<HTMLInputElement>) {
@@ -77,21 +85,22 @@ export default function CreatePizzaForm() {
     // Crea una nueva orden
     async function handleSave(event: MouseEvent<HTMLButtonElement>) {
         event.preventDefault();  // con esto evitamos que el form haga postBack
-
+        
         const orderToCreate = new Order(idOrder, clientName, size, pizzaName, ingredients, price, soda);
 
         await createOrder(orderToCreate);
         console.log("Order to create: ", orderToCreate);
         clearForm();
         window.alert("Order Created!");
+        window.location.replace("http://localhost:3000");
     }
 
     async function createOrder(orderToCreate: Order) {
-            await axios.post('http://localhost:3001/orders', orderToCreate, {
-                headers: {
-                    'Content-type': 'application/json'
-                }
-            });
+      await axios.post('http://localhost:3001/orders', orderToCreate, {
+          headers: {
+              'Content-type': 'application/json'
+          }
+      });
     }
 
     function clearForm() {
@@ -277,7 +286,7 @@ export default function CreatePizzaForm() {
                       <ul>
                         <li>
                           <label>
-                          <input type="checkbox" value = {"Carne molida"} onChange = {handleIngredientsChange}/>Carne molida
+                          <input type="checkbox" value = {"Carne molida"} onChange = {handleIngredientsChange}/>
                             <div className="icon-box sombra">
                               <p className="fa" aria-hidden="true">Carne  Molida</p>
                             </div>
@@ -380,7 +389,7 @@ export default function CreatePizzaForm() {
             </tr>
             <tr>
               <td align="right"><h2 className="fuente-azul size-14">Id de pedido</h2></td> {/*Input nombre*/}
-              <td ><input type={"text"} placeholder="#"></input></td>
+              <td ><input type="text" placeholder="Id" value = {idOrder} onChange = {handleIdChange}/></td>
             </tr>
             <tr>
               <td>

@@ -1,0 +1,278 @@
+:root{
+    --colorUno: #FEAD3B;
+    --colorDos: #335466;
+    --colorTres: #e6e6e6;
+    --colorCuatro: #ffffff; 
+    --colorCinco: #dadada;
+  }
+  
+  * {
+    font-family: 'Roboto';
+  }
+  
+ 
+  
+  .fuente-naranja {
+    color: var(--colorUno)
+  }
+  
+  .fondo-naranja {
+    background-color: var(--colorUno);
+  }
+  
+  .fuente-blanco {
+    color: var(--colorCuatro);
+  }
+  
+  .fuente-azul {
+    color: var(--colorDos)
+  }
+  
+  .fuente-30{
+    font-size: 30px;
+  }
+  
+  .fuente-20{
+    font-size: 20px;
+  }
+  
+ .size-16{
+   font-size: 16px;
+   font-weight: bold;
+ }
+
+ .size-14{
+  font-size: 14px;
+  font-weight: bold;
+}
+  
+  
+  h2 {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  hr {
+    border: 1px solid;
+  }
+  
+  .linea-titulo {
+    margin-left: 20px;
+    width: 700px;
+  }
+
+  .divider{
+    width: 700px;
+    margin-left: 1.3rem;
+    height: 3px;
+    background-color: #FEAD3B;
+  }
+  
+  .linea-subtitulo {
+    color:  var(--colorCinco);
+    width: 700px;
+  }
+  
+  .linea-detalle {
+    border-right: solid var(--colorUno);
+    color: var(--colorCuatro);
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    height: 80px;
+  }
+  
+  .display-inline-block {
+    display: inline-flex;
+    align-items: center;
+    text-align: right;
+  }
+  
+  .margen-40 {
+    margin: 40px 40px 40px 40px;
+  }
+  
+  .margen-30 {
+    margin: 30px 30px 30px 30px;
+  }
+  
+  .margen-20 {
+    margin: 20px 20px 20px 20px;
+  }
+  
+  .margen-10 {
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .margen-0 {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .formulario {
+    border-collapse: separate;
+    border-spacing: 30px 19px;
+  }
+  
+  .recibo {
+    width: 90rem;
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    padding-bottom: 10px;
+    padding-left: 160px;
+  }
+  
+  .bold {
+    font-weight: bolder;
+  }
+  
+  .sombra {
+    box-shadow: 0px 2px 10px grey;
+  }
+  
+  select {
+    background-color: var(--colorCuatro);
+    box-shadow: 0px 2px 10px grey;
+    border-style: none;
+    border-radius: 10px;
+    display: block;
+    font-size: 13px;
+    padding: 8px 30px 8px 30px;
+    text-align: left;
+    width: 100%;
+    background-image: url(../assets/flecha_nueva.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    -webkit-appearance: none;
+    background-size: 25px;
+    background-position-x: 41.5rem;
+    cursor: pointer;
+  }
+  
+  button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-registro {
+    border-style: none;
+    font-weight: bolder;
+    background-color: var(--colorUno);
+    color: var(--colorCuatro);
+    font-size: 18px;
+    padding: 8px 38px 8px 38px;
+    border-radius:30px;
+    float: left;
+    display: block;
+  }
+  
+  button:hover {
+    font-size: 21px;
+    background-color: var(--colorUno);
+    color: var(--colorCuatro);
+    font-weight: bolder;
+  }
+  
+  p .fa{
+    display: inline-block;
+  }
+
+  .flex_section{
+    display: flex;
+    align-items: center;
+  }
+  
+  select::-ms-expand {
+    display: none;
+    }
+
+  .main_container{
+    width: 1300px;
+  }
+
+  .container_form{
+    background-color: var(--colorCuatro);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px grey;
+    margin-top: 1rem;
+  }
+  
+  
+  .fondo-blanco {
+    background-color: var(--colorCuatro);
+  }
+
+
+  
+  .fondo-gris {
+    background-color: var(--colorTres);
+  }
+  
+  .titulo {
+    font-weight: bolder;
+  }
+  
+  .borde-redondeado-20 {
+    border-radius: 20px !important;
+  }
+  
+  .borde-redondeado-10 {
+    border-radius: 10px !important;
+  }
+  
+  
+  table {
+    border-spacing: 0px;
+  }
+  
+  
+  ul {
+    padding: 0px;
+    margin: 0px;
+  }  
+    
+  li {
+      position: relative;
+      list-style: none;
+      text-align: center;
+      margin: 1rem 1rem;
+    }
+        input[type="checkbox"] {
+          position: absolute;
+          opacity: 0;
+          
+        }
+        
+        :checked ~ .icon-box {
+          background-color: var(--colorUno);
+          color: var(--colorCuatro) !important;
+          font-weight: bold;
+              }
+          
+        :checked ~ .icon-box p {
+          color: var(--colorCuatro) !important;
+          }
+
+          .fa {
+            transform: scale(0.95);
+          }
+        
+        
+        .icon-box {
+          background-color: var(--colorCuatro);
+          color: var(--colorDos);
+          font-size: 13px;
+          border-radius:30px;
+          width: 130px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+          
+          .fa {
+            font-size: 13px;
+            color: var(--colorDos);
+          }
+          
+  

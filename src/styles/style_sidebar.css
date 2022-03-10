@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.sidebar{
+    background-color: white;
+    position: fixed;
+    overflow: hidden;
+    box-shadow: -1px 4px 13px 4px rgba(0, 0, 0, 0.25);
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.3rem;
+    color: #335466;
+  }
+
+  .filter,
+  .description,
+  .profile_description,
+  .title_order{
+    display: flex;
+  }
+
+  .description{
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile_description{
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  .drop_arrow{
+    margin-left: 2rem;
+  }
+  .text_profile{
+    margin-left: 1rem;
+  }
+
+  .title_order{
+    justify-content: space-between;
+    margin-top: 4rem;
+  }
+
+  .filter{
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container_cards{
+    padding-top: 1rem;
+    margin-top: 2rem;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding-left: .5rem;
+    row-gap: 2rem;
+  }
+
+  .container_cards::-webkit-scrollbar{
+    width: 10px;
+  }
+
+  .container_cards::-webkit-scrollbar-thumb {
+    background-color: #FEAD3B;    
+    border-radius: 20px;       
+}
+
+  .card{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 450px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    }
+
+  .pizza_description{
+    width: 325px;
+    height: 130px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .id_pizza{
+     color: rgba(51, 84, 102, 0.6);
+     font-weight: bold;
+    font-size: 12px;
+  }
+
+  .name_pizza{
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .clientName_pizza{
+    font-size: 16px;
+    color: rgba(51, 84, 102, 0.6);
+  }
+
+  .ingredients_pizza{
+    font-size: 16px;
+  }
+
+  .soda{
+      font-size: 16px;
+  }
+
+  .price{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FEAD3B;
+  }
+
+  .orange_section{
+    height: 130px;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .cancel_img{
+    border: none;
+  }

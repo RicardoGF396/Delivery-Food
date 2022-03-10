@@ -57,7 +57,7 @@
   
   .linea-titulo {
     margin-left: 20px;
-    width: 700px;
+    width: 745px !important;
   }
 
   .divider{
@@ -109,7 +109,7 @@
   
   .formulario {
     border-collapse: separate;
-    border-spacing: 30px 19px;
+    border-spacing: 30px 18px;
   }
   
   .recibo {
@@ -145,6 +145,19 @@
     background-size: 25px;
     background-position-x: 41.5rem;
     cursor: pointer;
+  }
+
+  input {
+    background-color: var(--colorCuatro);
+    box-shadow: 0px 2px 10px grey;
+    color: var(--colorDos);
+    border-style: none;
+    border-radius: 10px;
+    display: block;
+    font-size: 13px;
+    padding: 8px 30px;
+    text-align: left;
+    width: 91.5%;
   }
   
   button {

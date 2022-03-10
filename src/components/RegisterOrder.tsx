@@ -45,7 +45,7 @@ export default function CreatePizzaForm() {
         const newValueForIngredients =  event.target.value;
         setIngredient(newValueForIngredients);
         if (event.target.checked === true) {
-        if (ingredients.length <= 4) {
+        if (ingredients.length <= 5) {
             // Agrega un elemento al arreglo si este no se encuentra ya
                 if (!ingredients.includes(event.target.value)) {
                     ingredients.push(event.target.value);
@@ -114,7 +114,7 @@ export default function CreatePizzaForm() {
       <table> {/*Título*/}
         <tr>
           <td className="linea"><p className="fuente-azul size-16">Registrar orden</p></td>
-          <td className="linea"><div className="divider fuente-naranja" /></td>
+          <td className="linea"><div className="divider linea-titulo fuente-naranja" /></td>
         </tr>
       </table>
 
@@ -146,7 +146,7 @@ export default function CreatePizzaForm() {
               <td align="right"><h2 className="fuente-azul size-14">Ingredientes</h2></td> {/*Ingredientes*/}
               <td><hr className="linea-subtitulo" /></td>
             </tr>
-
+            <div></div>
             <tr>
               <td align="right">
                 <h2 className="fuente-naranja size-14">Vegetales</h2> {/*Ingredientes vegetales*/}
@@ -304,7 +304,7 @@ export default function CreatePizzaForm() {
 
             <tr>
               <td align="right">
-                <h2 className="fuente-naranja size-14">Vegetales</h2> {/*Ingredientes otros*/}
+                <h2 className="fuente-naranja size-14">Otros</h2> {/*Ingredientes otros*/}
               </td>
 
               <td>
@@ -373,6 +373,14 @@ export default function CreatePizzaForm() {
                 <option value="Pepsi">Pepsi</option>
                 <option value="Squirt">Squirt</option>
               </select></td>
+            </tr>
+            <tr>
+              <td align="right"><h2 className="fuente-azul size-14">Nombre de cliente</h2></td> {/*Input nombre*/}
+              <td ><input type="text" placeholder="Ingresa el nombre" value = {clientName} onChange = {handleClientNameChange}/></td>
+            </tr>
+            <tr>
+              <td align="right"><h2 className="fuente-azul size-14">Id de pedido</h2></td> {/*Input nombre*/}
+              <td ><input type={"text"} placeholder="#"></input></td>
             </tr>
             <tr>
               <td>

@@ -10,7 +10,7 @@ import CreatePizzaForm from "./RegisterOrder";
 import "../styles/style_sidebar.css";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2"
-import { time } from "console";
+//import { time } from "console";
 
 export default function MostrarOrdenes() {
   const [ order, setOrder ] = useState<Order[]>([]);
@@ -20,7 +20,10 @@ export default function MostrarOrdenes() {
   async function loadOrder() {
     const response = await axios.get("http://localhost:3001/orders");
     setOrder(
-      response.data.map((o: Order ) => new Order(o.idOrder, o.clientName, o.pizzaName, o.size, o.ingredients, o.price, o.soda))
+      response.data.map((o: Order ) => new Order(o.idOrder, o.clientName, o.pizzaName, o.size, o.ingredients, o.price, o.soda)
+    
+      )
+      
     );
     setLoaded(true);
   }
@@ -41,7 +44,7 @@ export default function MostrarOrdenes() {
     });
   };
 
-  async function deleteOrder(idOrder: string) {
+  async function deleteOrder(idOrder:any) {
     await axios.delete(`http://localhost:3001/orders/${idOrder}`);
 
     // window.alert("Order Deleted");

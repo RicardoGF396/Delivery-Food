@@ -4,19 +4,22 @@ import axios from "axios";
 import { type } from "@testing-library/user-event/dist/type";
 
 export default function CreatePizzaForm() {
-    const [idOrder, setId] = useState ('');
+   
+    const [idOrder, setId] = useState (0);
     const [clientName, setClient] = useState ('');
     const [pizzaName, setPizza] = useState ('');
     const [size, setSize] = useState ('');
+    var listIngredients ="";
     const [ingredients, setIngredients] = useState ([""]);
     const [ingredient, setIngredient] = useState ('');
     const [price, setPrice] = useState (0);
     const [soda, setSoda] = useState ('');
+    const [ingredientsline, setIngredientsline] = useState ('');
     
     console.log("Id:" + idOrder);
     function handleIdChange(event: ChangeEvent<HTMLInputElement>) {
         const newValueForId = event.target.value;
-        setId(newValueForId);
+        setId(0);
     }
 
     console.log("Cliente:" + clientName);
@@ -48,7 +51,9 @@ export default function CreatePizzaForm() {
             // Agrega un elemento al arreglo si este no se encuentra ya
                 if (!ingredients.includes(event.target.value)) {
                     ingredients.push(event.target.value);
+                   
                 }
+                
         } else {
 
         } 
@@ -57,6 +62,12 @@ export default function CreatePizzaForm() {
         let pos =ingredients.indexOf(event.target.value);
             ingredients.splice(pos, 1);
     }
+      //Generar en una sola linea todos los ingredientes (BD)
+       for (let index = 0; index < ingredients.length; index++) {
+          listIngredients += ingredients[index];
+           
+       }
+       setIngredientsline(listIngredients);
     }
     
 
@@ -77,7 +88,7 @@ export default function CreatePizzaForm() {
     async function handleSave(event: MouseEvent<HTMLButtonElement>) {
         event.preventDefault();  // con esto evitamos que el form haga postBack
 
-        const orderToCreate = new Order(idOrder, clientName, size, pizzaName, ingredients, price, soda);
+        const orderToCreate = new Order(idOrder,clientName, size, pizzaName, ingredientsline, price, soda);
 
         await createOrder(orderToCreate);
         console.log("Order to create: ", orderToCreate);
@@ -86,7 +97,7 @@ export default function CreatePizzaForm() {
     }
 
     async function createOrder(orderToCreate: Order) {
-            await axios.post('http://localhost:3001/orders', orderToCreate, {
+            await axios.post('http://localhost:3001/orders',orderToCreate, {
                 headers: {
                     'Content-type': 'application/json'
                 }
@@ -94,7 +105,7 @@ export default function CreatePizzaForm() {
     }
 
     function clearForm() {
-        setId('');
+        setId(0);
         setClient('');
         setPizza('');
         setSize('');

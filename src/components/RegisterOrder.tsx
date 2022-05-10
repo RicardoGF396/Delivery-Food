@@ -5,6 +5,7 @@ import axios from "axios";
 import MostrarOrdenes from './MostrarOrdenes';
 import React from 'react';
 import Swal from "sweetalert2"
+import ingredientsline from './CreatePizzaForm';
 
 /*class Actualizar extends React.Component {
   onTrigger = (event: event) => {        
@@ -15,19 +16,21 @@ import Swal from "sweetalert2"
 
 export default function CreatePizzaForm(props: any) {
   //INICIO INSERTAR
-    const [idOrder, setId] = useState ('');
+    const [idOrder, setId] = useState (0);
     const [clientName, setClient] = useState ('');
     const [pizzaName, setPizza] = useState ('');
     const [size, setSize] = useState ('');
+    var listIngredients ="";
     const [ingredients, setIngredients] = useState ([""]);
     const [ingredient, setIngredient] = useState ('');
     const [price, setPrice] = useState (0);
     const [soda, setSoda] = useState ('');
-    
+    const [ingredientsline, setIngredientsline] = useState ('');
+
     console.log("Id:" + idOrder);
     function handleIdChange(event: ChangeEvent<HTMLInputElement>) {
         const newValueForId = event.target.value;
-        setId(newValueForId);
+        setId(0);
     }
 
     console.log("Cliente:" + clientName);
@@ -63,18 +66,32 @@ export default function CreatePizzaForm(props: any) {
         } else {
 
         } 
+
     } else if (event.target.checked === false) {
         // Elimina el elemento del arreglo que tenga el mismo valor
         let pos =ingredients.indexOf(event.target.value);
             ingredients.splice(pos, 1);
     }
+    for (let index = 0; index < ingredients.length; index++) {
+      listIngredients += ingredients[index];
+       
+   }
+   setIngredientsline(listIngredients);
+   console.log("Precio:" + price);
+
+   if (size === "Mediana"){
+    setPrice(190.00);
+
+   }else if(size === "Grande" ){
+    setPrice(220.00);
+
+   }else{
+    setPrice(320.00);
+   }
+   
     }
 
-    console.log("Precio:" + price);
-    function handlePriceChange(event: ChangeEvent<HTMLInputElement>) {
-        const newValueForPrice = event.target.value;
-        setPrice(parseInt(newValueForPrice));
-    }
+    
 
     console.log("Soda:" + soda);
     function handleSodaChange(event: ChangeEvent<HTMLSelectElement>) {
@@ -94,7 +111,7 @@ export default function CreatePizzaForm(props: any) {
     async function handleSave(event: MouseEvent<HTMLButtonElement>) {
         event.preventDefault();  // con esto evitamos que el form haga postBack
         
-        const orderToCreate = new Order(idOrder, clientName, size, pizzaName, ingredients, price, soda);
+        const orderToCreate = new Order(idOrder,clientName, size, pizzaName,ingredientsline, price, soda);
 
         await createOrder(orderToCreate);
         console.log("Order to create: ", orderToCreate);
@@ -105,7 +122,7 @@ export default function CreatePizzaForm(props: any) {
     }
 
     async function createOrder(orderToCreate: Order) {
-      await axios.post('http://localhost:3001/orders', orderToCreate, {
+      await axios.post('http://localhost:3001/orders',orderToCreate, {
           headers: {
               'Content-type': 'application/json'
           }
@@ -113,7 +130,7 @@ export default function CreatePizzaForm(props: any) {
     }
 
     function clearForm() {
-        setId('');
+        setId(0);
         setClient('');
         setPizza('');
         setSize('');
@@ -396,10 +413,7 @@ export default function CreatePizzaForm(props: any) {
               <td align="right"><h2 className="fuente-azul size-14">Nombre de cliente</h2></td> {/*Input nombre*/}
               <td ><input type="text" placeholder="Ingresa el nombre" value = {clientName} onChange = {handleClientNameChange}/></td>
             </tr>
-            <tr>
-              <td align="right"><h2 className="fuente-azul size-14">Id de pedido</h2></td> {/*Input nombre*/}
-              <td ><input type="text" placeholder="Id" value = {idOrder} onChange = {handleIdChange}/></td>
-            </tr>
+           
             <tr>
               <td>
               </td>
@@ -422,7 +436,7 @@ export default function CreatePizzaForm(props: any) {
             </tr>
             <tr>
               <td className='flex_section'>
-                <p className="bold fuente-naranja fuente-20 margen-0">$</p><p className="bold fuente-azul fuente-30 margen-0">172.50</p>
+                <p className="bold fuente-naranja fuente-20 margen-0">$</p><p className="bold fuente-azul fuente-30 margen-0">{price}</p>
               </td>
             </tr>
           </table>
